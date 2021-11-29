@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/webjars/boostrap/css/boostrap.min.css">
+    <link rel="stylesheet" href="css/.css">
+    <link th:href="@{/webjars/bootstrap/css/bootstrap.min.css}" rel="stylesheet"/>
+    <link th:href="@{/webjars/bootstrap/css/bootstrap-theme.min.css}" rel="stylesheet"/>
+    <link th:href="@{/webjars/font-awesome/css/font-awesome.min.css}" rel="stylesheet"/>
+    <link th:href="@{/css/style.css}" rel="stylesheet"/>
+
+    <title>Recicla Recife</title>
+    <meta name="author" content="Guilherme Magno">
+    <script src="https://kit.fontawesome.com/006642858d.js"></script>
+    <link
+            href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;1,600&family=Ubuntu&family=Work+Sans&display=swap"
+            rel="stylesheet">
+
+</head>
+
+<body>
+
+<div th:replace="fragmentos/fragmentos :: cabecalho"></div>
+
+<div class="container" style="margin-top: 50px;">
+    <h3>Últimas Denúncias</h3>
+    <hr>
+    <table class="table table-bordered table-hover">
+
+        <thead>
+        <th scope="col">NomeE</th>
+        <th scope="col">CEP</th>
+        <th scope="col">Denuncia</th>
+        <th scope="col">Data</th>
+        <th scope="col">Ação</th>
+
+        </thead>
+
+        <tbody>
+
+        <!-- LISTAR DENUNCIAS -->
+        <tr scope="row" th:each="denuncias : ${denunciasList}">
+
+            <td th:text="${denuncias.nome}"></td>
+            <td th:text="${denuncias.cep}"></td>
+            <td th:text="${denuncias.denuncia}"></td>
+            <td th:text="${denuncias.data}"></td>
+
+            <td>
+                <a class="btn btn-primary" th:href="@{alterar/{id}(id=${denuncias.id}))}">
+                    <i class="fas fa-edit"></i>Editar</a>
+
+                <a class="btn btn-danger" th:href="@{excluir/{id}(id=${denuncias.id}))}">
+                    <i class="fas fa-times"></i>Excluir</a>
+            </td>
+
+        </tbody>
+</body>
+<div th:replace="fragmentos/fragmentos :: rodape"></div>
+<script th:src="@{/webjars/jquery/jquery.min.js}"></script>
+<script th:src="@{/webjars/bootstrap/js/bootstrap.min.js}"></script>
+</body>
+<html>

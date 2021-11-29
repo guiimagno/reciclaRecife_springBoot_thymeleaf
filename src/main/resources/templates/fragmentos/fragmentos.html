@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/webjars/boostrap/css/boostrap.min.css">
+    <link rel="stylesheet" href="css/.css">
+    <link th:href="@{/webjars/bootstrap/css/bootstrap.min.css}" rel="stylesheet"/>
+    <link th:href="@{/webjars/bootstrap/css/bootstrap-theme.min.css}" rel="stylesheet"/>
+    <link th:href="@{/webjars/font-awesome/css/font-awesome.min.css}" rel="stylesheet"/>
+    <link th:href="@{/css/style.css}" rel="stylesheet"/>
+
+    <title>Recicla Fragmentos</title>
+    <meta name="author" content="Guilherme Magno">
+    <script src="https://kit.fontawesome.com/006642858d.js"></script>
+    <link
+            href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;1,600&family=Ubuntu&family=Work+Sans&display=swap"
+            rel="stylesheet">
+</head>
+<body>
+<!-- CABEÇALHO -->
+<header th:fragment="cabecalho">
+    <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #9DBF7A">
+        <a class="navbar-brand" th:href="@{/}">
+            <img src="/img/logo.png" width="190px" padding="10px"/></a>
+
+        <div id="navMobile" class="navbar-collapse collapse justify-content-end">
+            <a class="btn-nav nav-item nav-link">HOME</a>
+            <a class="btn-nav nav-item nav-link" th:href="@{inserirDenuncia}">DENÚNCIA</a>
+        </div>
+    </nav>
+</header>
+
+
+<section th:fragment="corpo" style="'background-image: url(/img/10181.jpg);'">
+
+
+    <!--    <div class="container" style="margin: auto;">-->
+    <div class="container" style="margin-top: 30px;">
+
+
+    </div>
+
+
+</section>
+<footer th:fragment="rodape">
+    <div class="rodape">
+        <span>Todos os direitos reservados - 2021 &copy; Guilherme Magno</span>
+    </div>
+</footer>
+
+<script th:src="@{/webjars/jquery/jquery.min.js}"></script>
+<script th:src="@{/webjars/bootstrap/js/bootstrap.min.js}"></script>
+</body>
+<html>

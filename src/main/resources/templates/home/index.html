@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/webjars/boostrap/css/boostrap.min.css">
+    <link rel="stylesheet" href="css/.css">
+    <link th:href="@{/webjars/bootstrap/css/bootstrap.min.css}" rel="stylesheet"/>
+    <link th:href="@{/webjars/bootstrap/css/bootstrap-theme.min.css}" rel="stylesheet"/>
+    <link th:href="@{/webjars/font-awesome/css/font-awesome.min.css}" rel="stylesheet"/>
+    <link th:href="@{/css/style.css}" rel="stylesheet"/>
+
+    <title>Recicla Home</title>
+    <meta name="author" content="Guilherme Magno">
+    <script src="https://kit.fontawesome.com/006642858d.js"></script>
+    <link
+            href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;1,600&family=Ubuntu&family=Work+Sans&display=swap"
+            rel="stylesheet">
+</head>
+<body>
+
+<div th:replace="fragmentos/fragmentos :: cabecalho"></div>
+<section class="neo-section" style="background-image: url('img/10181.jpg');"></section>
+
+<div th:replace="fragmentos/fragmentos :: corpo"></div>
+
+<div class="texto-main">
+    <h1>Recicla Recife</h1>
+</div>
+<div class="botoes">
+    <div class="wm">
+        <button type="submit" class="btn btn-sucess">Enviar!</button>
+    </div>
+    <div class="wm">
+        <button type="submit" class="btn btn-sucess">Enviar!</button>
+    </div>
+    <div class="wm">
+        <button type="submit" class="btn btn-sucess">Enviar!</button>
+    </div>
+    <div class="wm">
+        <button type="submit" class="btn btn-sucess">Enviar!</button>
+    </div>
+</div>
+</section>
+
+<script th:src="@{/webjars/jquery/jquery.min.js}"></script>
+<script th:src="@{/webjars/bootstrap/js/bootstrap.min.js}"></script>
+
+<div th:replace="fragmentos/fragmentos :: rodape"></div>
+</body>
+<html>

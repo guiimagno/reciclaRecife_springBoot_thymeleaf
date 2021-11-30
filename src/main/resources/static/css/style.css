@@ -13,7 +13,7 @@ a.btn-nav:hover{color: #96e072}
 	position: relative;
 }
 .row{margin: auto;}
-.wm{width: 50%; float: left;}
+.wm{width: 50%;}
 .clear{clear: both;}
 .center{text-align: center;}
 .neo-container{max-width: 1280px; padding: 2% 2%; margin: 0 auto; margin-top: 100px;}
@@ -24,9 +24,6 @@ a.btn-nav:hover{color: #96e072}
 }
 
 .texto-centro{color: #034C8C; font-size: 3em; font-family: 'Ubuntu'; font-weight: bold;}
-.btn{width: 120px; font-weight: bold; background-color: #4BEB46;border-radius: 10px;}
-.botoes{padding: 2% 10%;}
-.btn:hover{color: #A65665; background-color: rgba(0,0,0,0.2);}
 .rodape{color: #fff; background-color: #9DBF7A; text-align: justify; font-size: 1em;}
 
 @media screen and(max-width: 667px){
@@ -34,3 +31,19 @@ a.btn-nav:hover{color: #96e072}
 	nav{height: 100%;}
 	.neo-container{margin-top: 120px;}
 }
+.media {
+	margin-top: 1rem;
+}
+
+.media a {
+	text-decoration: none;
+	color: #9DBF7AFF;
+	font-size: 24px;
+	padding: 2% 10%;
+	border: 3px solid #9DBF7AFF;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	transition: .5s cubic-bezier(0.55, 0.025, 0.675, 0.97);
+}
+

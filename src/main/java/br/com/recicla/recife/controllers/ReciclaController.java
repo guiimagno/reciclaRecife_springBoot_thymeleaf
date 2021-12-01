@@ -31,20 +31,20 @@ public class ReciclaController {
 		ModelAndView mv = new ModelAndView();
 		if (br.hasErrors()) {
 			mv.setViewName("Denuncia/form");
-			mv.addObject("recicla");
+				mv.addObject("recicla");
 		} else {
-			mv.setViewName("redirect:/denuncia-add");
+			mv.setViewName("redirect:ultimas_denuncias");
 			repository.save(recicla);
 		}
 
 		return mv;
 	}
 
-	@GetMapping("denuncia-add")
+	@GetMapping("ultimas_denuncias")
 	public ModelAndView listAllDenuncia() {
 		ModelAndView mv = new ModelAndView();
 		mv.setViewName("Denuncia/listDenuncia");
-		mv.addObject("denunciasList", repository.findAll());
+		mv.addObject("lista_denuncias", repository.findAll());
 		return mv;
 	}
 
@@ -61,7 +61,7 @@ public class ReciclaController {
 	public ModelAndView alterar(Recicla recicla) {
 		ModelAndView mv = new ModelAndView();
 		repository.save(recicla);
-		mv.setViewName("redirect:/denuncia-add");
+		mv.setViewName("redirect:ultimas_denuncias");
 		return mv;
 
 	}
@@ -69,7 +69,7 @@ public class ReciclaController {
 	@GetMapping("/excluir/{id}")
 	public String excluirDenuncia(@PathVariable("id") Long id) {
 		repository.deleteById(id);
-		return "redirect:/denuncia-add";
+		return "redirect:ultimas_denuncias";
 	}
 
 }

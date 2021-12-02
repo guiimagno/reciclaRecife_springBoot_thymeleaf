@@ -16,6 +16,8 @@
 	<description>Recicla recife</description>
 	<properties>
 		<java.version>11</java.version>
+		<maven.compiler.souce>1.8</maven.compiler.souce>
+		<maven.compiler.target>1.8</maven.compiler.target>
 	</properties>
 	<dependencies>
 		<dependency>
